@@ -14,7 +14,7 @@ RUN set -ex; \
   tar -xf flink.tgz --strip-components=1; \
   rm flink.tgz;
 
-RUN echo "fs.hdfs.hadoopconf=$(hadoop classpath)" >> $FLINK_HOME/conf/flink-conf.yaml
+RUN echo "fs.hdfs.hadoopconf=$HADOOP_CONF_DIR" >> $FLINK_HOME/conf/flink-conf.yaml
 
 CMD ["bash"]
 
