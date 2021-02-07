@@ -19,8 +19,8 @@ RUN set -ex; \
 RUN echo "fs.hdfs.hadoopconf=$HADOOP_CONF_DIR" >> $FLINK_HOME/conf/flink-conf.yaml
 
 RUN set -ex; \
-    curl -fsl "$FLINK_SHADED_HADOOP_JAR" -o flink-shaded-hadoop-2-uber-$HADOOP_FLINK_JAR_VERSON.jar ; \
-    mv flink-shaded-hadoop-2-uber-$HADOOP_FLINK_JAR_VERSON.jar  $FLINK_HOME/lib/
+    curl -fsl "$FLINK_SHADED_HADOOP_JAR" -o flink-shaded-hadoop-2-uber-"$FLINK_SHADED_HADOOP_JAR_VERSON".jar ; \
+    mv flink-shaded-hadoop-2-uber-"$FLINK_SHADED_HADOOP_JAR_VERSON".jar  $FLINK_HOME/lib/
 
 CMD ["bash"]
 
